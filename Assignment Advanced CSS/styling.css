@@ -1,0 +1,235 @@
+body {
+  background-color: #c3cfe2;
+  margin: 100px;
+}
+
+.testimonial-box {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-section {
+  font-size: 32px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(105, 103, 103);
+  background-color: #fff;
+  padding: 80px;
+  text-align: left;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.testimonial-img {
+  position: absolute;
+  bottom: 175px;
+  left: 200px;
+  border-radius: 80%;
+  width: 150px;
+  height: 150px;
+  border: 8px solid #fff;
+}
+
+.footer-section {
+  position: relative;
+  background-color: #686de0;
+  padding: 50px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.footer-text {
+  text-align: center;
+  color: #fff;
+  padding: 50px;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.footer-website {
+  text-align: center;
+  color: #8889b3;
+  font-size: 22px;
+}
+
+.socialbuttons-container {
+  position: fixed;
+  top: 50%;
+  left: calc(100% - 50px);
+  transform: translateY(-50%);
+  min-width: 250px;
+}
+
+.social {
+  align-items: center;
+  display: flex;
+  width: 220px;
+  height: 25px;
+  padding: 10px;
+  color: white;
+  transition: transform 1s ease-in-out;
+}
+.social:hover {
+  transform: translateX(calc(-100% + 60px));
+}
+.social i {
+  width: 60px;
+}
+.social a {
+  color: white;
+  font-size: 16px;
+  text-align: right;
+  padding: 10px;
+}
+
+.blog {
+  background-color: #e17b77;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.twitter {
+  background-color: #00aced;
+}
+
+.github {
+  background-color: #333;
+}
+
+.linkedin {
+  background-color: #007bb6;
+}
+
+.portofoliogrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+.img1, .btn1 {
+  grid-area: 1/1/2/2;
+}
+
+.img2, .btn2 {
+  grid-area: 1/2/2/3;
+}
+
+.img3, .btn3 {
+  grid-area: 1/3/2/4;
+}
+
+.img4, .btn4 {
+  grid-area: 2/1/3/2;
+}
+
+.img5, .btn5 {
+  grid-area: 2/2/3/3;
+}
+
+.img6, .btn6 {
+  grid-area: 2/3/3/4;
+}
+
+.img7, .btn7 {
+  grid-area: 3/1/4/2;
+}
+
+img {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.btn1, .btn2, .btn3, .btn4, .btn5, .btn6, .btn7 {
+  border-radius: 5px;
+  opacity: 1;
+  height: 30px;
+  width: 80px;
+  margin-top: 120px;
+  margin-left: 50px;
+}
+
+.overlay {
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+  position: relative;
+  background-color: black;
+  opacity: 0;
+}
+.overlay:hover {
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+
+/*** MEDIA QUERY FOR PORTOFOLIO GRID ***/
+@media (max-width: 590px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  .portofoliogrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 10px;
+  }
+  .img1, .btn1 {
+    grid-area: 1/1/2/2;
+  }
+  .img2, .btn2 {
+    grid-area: 2/1/3/2;
+  }
+  .img3, .btn3 {
+    grid-area: 3/1/4/2;
+  }
+  .img4, .btn4 {
+    grid-area: 4/1/5/2;
+  }
+  .img5, .btn5 {
+    grid-area: 5/1/6/2;
+  }
+  .img6, .btn6 {
+    grid-area: 6/1/7/2;
+  }
+  .img7, .btn7 {
+    grid-area: 7/1/8/2;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .portofoliogrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 10px;
+  }
+  .img1, .btn1 {
+    grid-area: 1/1/2/2;
+  }
+  .img2, .btn2 {
+    grid-area: 1/2/2/3;
+  }
+  .img3, .btn3 {
+    grid-area: 2/1/3/2;
+  }
+  .img4, .btn4 {
+    grid-area: 2/2/3/3;
+  }
+  .img5, .btn5 {
+    grid-area: 3/1/4/2;
+  }
+  .img6, .btn6 {
+    grid-area: 3/2/4/3;
+  }
+  .img7, .btn7 {
+    grid-area: 4/1/5/2;
+  }
+}
+@media only screen and (min-width: 810px) {
+  .portofoliogrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 10px;
+  }
+}/*# sourceMappingURL=styling.css.map */
